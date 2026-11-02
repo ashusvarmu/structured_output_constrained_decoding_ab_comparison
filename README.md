@@ -1,4 +1,4 @@
-# schema_controlled_comparison_04c848e3
+# structured_output_constrained_decoding_ab_comparison
 
 （AIGC场景）如果结构化输出的约束解码与下游任务表现变了，下游表现会跟着变吗？用结构与协议校验区分相关与因果，给出可证伪的检验。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python schema_controlled_comparison_04c848e3.py --help
-python schema_controlled_comparison_04c848e3.py --input sample.txt
-python schema_controlled_comparison_04c848e3.py --input sample.txt --json
+python structured_output_constrained_decoding_ab_comparison.py --help
+python structured_output_constrained_decoding_ab_comparison.py --input sample.txt
+python structured_output_constrained_decoding_ab_comparison.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「对照实验」使用分隔符 `（无）` 区分标签与载荷。
@@ -50,7 +50,7 @@ python schema_controlled_comparison_04c848e3.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python schema_controlled_comparison_04c848e3.py --input sample.txt --json`；
+2. 运行 `python structured_output_constrained_decoding_ab_comparison.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
